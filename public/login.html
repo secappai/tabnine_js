@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="favicon.ico" rel="icon">
    
+    <script src="https://cdn.jsdelivr.net/npm/jsonwebtoken@9.0.0/dist/jsonwebtoken.min.js"></script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -169,14 +170,14 @@
     <!-- <form action="https://jagadeeshpj.herokuapp.com/" method="POST"> -->
       <!--// le form envoit soit sur home.html soit sur ok.html selon le cas -->
 
-     <form id="loginForm" action="home.html">
+     <form id="loginForm" action="/login" method="POST">
       <div class="field">
         <span class="fa fa-user"></span>
-        <input type="email" id="email" required placeholder="Email">
+        <input type="email" id="email" name="email" required placeholder="Email">
       </div>
       <div class="field space">
         <span class="fa fa-lock"></span>
-        <input type="password" id="password" class="pass-key" required placeholder="Password">
+        <input type="password" id="password" class="pass-key" name="password" required placeholder="Password">
         <span class="show"></span>
       </div>
       <br>
